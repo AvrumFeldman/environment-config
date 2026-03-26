@@ -12,3 +12,8 @@ New-Item -ItemType SymbolicLink -Target ".\Powershell_profile.ps1" -Path $profil
 
 New-Item -ItemType SymbolicLink -Target "$env:USERPROFILE\Documents\powershelling\ssh_config" -Path "$env:USERPROFILE\.ssh\config"
 ```
+
+In Linux execute the following in Powershell to setup the symbolic link
+```
+New-Item -ItemType SymbolicLink -Target $pwd/Powershell_profile.ps1 -Path $PROFILE -force
+```
