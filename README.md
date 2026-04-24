@@ -8,9 +8,9 @@ $Profiles = "$env:userprofile\Documents\PowerShell\Microsoft.VSCode_profile.ps1"
 
 Get-ChildItem -File $profiles | Rename-Item -NewName {$_.name + ".old"} -erroraction SilentlyContinue
 
-New-Item -ItemType SymbolicLink -Target ".\Powershell_profile.ps1" -Path $profiles
+New-Item -ItemType SymbolicLink -Target "$pwd\Powershell_profile.ps1" -Path $profiles
 
-New-Item -ItemType SymbolicLink -Target "$env:USERPROFILE\Documents\powershelling\ssh_config" -Path "$env:USERPROFILE\.ssh\config"
+New-Item -ItemType SymbolicLink -Target "$pwd\ssh_config" -Path "$env:USERPROFILE\.ssh\config"
 ```
 
 In Linux execute the following in Powershell to setup the symbolic link
